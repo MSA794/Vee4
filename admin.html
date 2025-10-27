@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>لوحة تحكم الأدمن - Vee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-yellow-300">
+  <header class="bg-black/60 p-4 border-b border-yellow-600/20">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center text-black font-bold">V</div>
+        <h1 class="font-bold">لوحة تحكم الأدمن</h1>
+      </div>
+      <div class="text-right">
+        <div id="adminName" class="font-bold">-</div>
+        <div id="adminAccount" class="text-yellow-400/70 font-mono text-sm">-</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+    <aside class="lg:col-span-1 bg-black/50 p-4 rounded-xl border border-yellow-600/10">
+      <button data-panel="dashboard" class="w-full text-right px-3 py-2 rounded hover:bg-yellow-600/10">لوحة التحكم</button>
+      <button data-panel="recharge" class="w-full text-right px-3 py-2 rounded hover:bg-yellow-600/10 mt-2">شحن النقاط</button>
+      <button data-panel="sections" class="w-full text-right px-3 py-2 rounded hover:bg-yellow-600/10 mt-2">إدارة الأقسام</button>
+      <button data-panel="users" class="w-full text-right px-3 py-2 rounded hover:bg-yellow-600/10 mt-2">إدارة الحسابات</button>
+      <button id="adminLogout" class="w-full mt-4 bg-red-600 text-white px-3 py-2 rounded">تسجيل خروج</button>
+      <div class="mt-4 text-sm text-yellow-400/70">عدد المستخدمين: <span id="userCount">0</span></div>
+    </aside>
+
+    <section id="adminContent" class="lg:col-span-3 bg-black/50 p-4 rounded-xl border border-yellow-600/10">
+      <!-- dynamic admin panels -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

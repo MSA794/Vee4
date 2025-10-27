@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>لوحة المستخدم - Vee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-yellow-300">
+  <header class="bg-black/60 p-4 border-b border-yellow-600/20">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center text-black font-bold">V</div>
+        <h1 class="font-bold">Vee</h1>
+      </div>
+      <div class="text-right">
+        <div id="dashUsername" class="font-bold">-</div>
+        <div id="dashAccount" class="text-yellow-400/70 font-mono text-sm">-</div>
+        <div id="dashBalance" class="text-green-400 font-bold text-sm">0 نقطة</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-black/50 p-3 border-b border-yellow-600/10">
+    <div class="max-w-6xl mx-auto flex gap-2 flex-wrap">
+      <button data-section="home" class="px-3 py-1 rounded bg-yellow-600/10">الرئيسية</button>
+      <button data-section="terminal" class="px-3 py-1 rounded">ترمكس</button>
+      <button data-section="whatsapp" class="px-3 py-1 rounded">واتساب</button>
+      <button data-section="facebook" class="px-3 py-1 rounded">فيسبوك</button>
+      <button data-section="telegram" class="px-3 py-1 rounded">تلجرم</button>
+      <button data-section="apps" class="px-3 py-1 rounded">تطبيقات المجال</button>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <section id="home" class="space-y-4">
+      <h2 class="text-2xl font-bold">مرحبًا بك</h2>
+      <p class="text-yellow-400/80">اختر قسمًا لعرض الدروس والأدوات.</p>
+    </section>
+
+    <section id="sectionArea" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+  </main>
+
+  <footer class="p-6 text-center text-yellow-400/70">© 2025 Vee</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
